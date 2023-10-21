@@ -56,7 +56,6 @@
     height: 4em;
     border-radius: 50%;
  }
-
- .navbar{
-    height: 85px;
- }
+.navbar{
+    height: auto;
+}
