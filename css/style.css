@@ -1,81 +1,43 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
- .banner{
-    background: url("../img/imagenFondo.jpeg")fixed center/cover;
-    height: 1000px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
- }
-
- .banner::before{
-    content: "";
-    height: 100%;
-    width: 100%;
-    background:  #d9d7ae;
-    opacity: 0.1;
-
- }
-
- .banner__info{
- padding: 0.3em;
- position: absolute;
- width: 100%;
- max-width: 700px;
- text-align: center;
- background-color: #93939178;
- color: rgb(254, 254, 254);
- margin: auto;
-
- }
-
- .banner__title{
-    line-height: 1.2;
-    font-size: 4em;
-    font-family: 'Times New Roman', Times, serif;
-
- }
-
- .banner__p{
-    line-height: 2em;
-    font-size: 1.9em;
-   font-family: 'Times New Roman', Times, serif;
- }
-
+*{margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+    }
+    
+ body{
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+  }
+    
  .color-nav{
- background-color: #ecec0f;
+  background-color: #ecec0f;
  }
+    
+    .logo{
+     width: 3em;
+     height: 3em;
+     border-radius: 50%;
+     margin-top: 5px
+    }
+    .navbar{
+    height: auto;
+    }
+    
+    footer{
+    background-color: #ecec0f;
+    padding: 1em 0;
+    margin-top: auto;
+    }
+    
+    #logo-footer{
+     width: 6em;
+     height: 6em;
+     border-radius: 50%;
+     margin-top: 5px
+    }
 
- .logo{
-    width: 3em;
-    height: 3em;
-    border-radius: 50%;
-    margin-top: 5px
- }
-.navbar{
-height: auto;
-}
-
-footer{
- background-color: #ecec0f;
-padding: 1em 0;
-margin-top: auto;
-}
-
-#logo-footer{
-    width: 6em;
-    height: 6em;
-    border-radius: 50%;
-    margin-top: 5px
- }
+    
+#body-register{
+        background-color: black;
+    }
