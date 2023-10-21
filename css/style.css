@@ -28,7 +28,7 @@
  width: 100%;
  max-width: 700px;
  text-align: center;
- color: rgb(255, 242, 0);
+ color: rgb(255, 136, 217);
  margin: auto;
 
  }
@@ -36,14 +36,14 @@
  .banner__title{
     line-height: 1.2;
     font-size: 4em;
-   font-family: cursive;
+    font-family: 'Times New Roman', Times, serif;
 
  }
 
  .banner__p{
     line-height: 2em;
     font-size: 1.9em;
-    font-family: cursive;
+   font-family: 'Times New Roman', Times, serif;
  }
 
  .color-nav{
