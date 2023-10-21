@@ -28,7 +28,8 @@
  width: 100%;
  max-width: 700px;
  text-align: center;
- color: rgb(255, 136, 217);
+ background-color: #93939178;
+ color: rgb(254, 254, 254);
  margin: auto;
 
  }
@@ -51,9 +52,10 @@
  }
 
  #logo{
-    width: 4em;
-    height: 4em;
-    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    border-radius: 40%;
+    margin-top: 5px
  }
 .navbar{
 height: auto;
