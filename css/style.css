@@ -1,43 +1,85 @@
 
 *{margin: 0;
- padding: 0;
- box-sizing: border-box;
+   padding: 0;
+   box-sizing: border-box;
+      }
+      
+   body{
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
     }
-    
- body{
- display: flex;
- flex-direction: column;
- min-height: 100vh;
-  }
-    
- .color-nav{
-  background-color: #ecec0f;
- }
-    
-    .logo{
-     width: 3em;
-     height: 3em;
-     border-radius: 50%;
-     margin-top: 5px
-    }
-    .navbar{
-    height: auto;
-    }
-    
-    footer{
+      
+   .color-nav{
     background-color: #ecec0f;
-    padding: 1em 0;
-    margin-top: auto;
+   }
+      
+      .logo{
+       width: 3em;
+       height: 3em;
+       border-radius: 50%;
+       margin-top: 5px
+      }
+      .navbar{
+      height: auto;
+      }
+      
+      footer{
+      background-color: #ecec0f;
+      padding: 1em 0;
+      margin-top: auto;
+      }
+      
+      #logo-footer{
+       width: 6em;
+       height: 6em;
+       border-radius: 50%;
+       margin-top: 5px
+      }
+  
+      
+  #body-register{
+          background-color: black;
+      }
+  
+      .bannerr{
+        background: url("../img/imagenFondo.jpeg")center/cover;
+        height: 1000px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+  
+   .banner::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+  
     }
-    
-    #logo-footer{
-     width: 6em;
-     height: 6em;
-     border-radius: 50%;
-     margin-top: 5px
-    }
-
-    
-#body-register{
-        background-color: black;
-    }
+  
+  .banner__info{
+     padding: 0.3em;
+     position: absolute;
+     width: 100%;
+     max-width: 700px;
+     text-align: center;
+     color: rgb(255, 255, 255);
+     margin: auto;
+     background-color: rgba(202, 202, 202, 0.717);
+  }
+  
+  .banner__titlee{
+     color: rgb(0, 0, 0);
+     line-height: 1.5;
+     font-size: 4em;
+     font-family: 'Times New Roman', Times, serif;
+  
+  }
+  
+  .banner__p{
+     color: rgb(0, 0, 0);
+     line-height: 2;
+     font-size: 2em;
+     font-family: 'Times New Roman', Times, serif;
+  }
