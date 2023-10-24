@@ -69,17 +69,16 @@
      background-color: rgba(202, 202, 202, 0.717);
   }
   
-  .banner__titlee{
+  .banner_title{
      color: rgb(0, 0, 0);
      line-height: 1.5;
      font-size: 4em;
-     font-family: 'Times New Roman', Times, serif;
-  
+     font-family: 'Sedgwick Ave Display', cursiva;
   }
   
   .banner__p{
      color: rgb(0, 0, 0);
      line-height: 2;
      font-size: 2em;
-     font-family: 'Times New Roman', Times, serif;
+     font-family: 'Sedgwick Ave Display', cursiva;
   }
