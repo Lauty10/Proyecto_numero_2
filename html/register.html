@@ -49,13 +49,18 @@
         </div>
         <div class="mb-3 mt-5">
             <label for="exampleInputPassword1" class="form-label text-light  d-flex justify-content-center pb-2" style="font-family: 'Times New Roman', Times, serif;font-size: 25px;">Ingrese su Contraseñia</label>
-            <input type="password" class="form-control" id="passRegister" minlength="8" maxlength="15" name="pass">
+            <input type="password" class="form-control" id="passRegister" minlength="8" maxlength="25" name="pass">
             <div id="errThree"  class="text-danger text-center">Completar campo vacio</div>
+            <div id="passErr" class="text-danger text-center">Las contraseñas no coinciden,volver a ingresar</div>
+          
           </div>
           <div class="mb-3 mt-5">
             <label for="exampleInputPassword1" class="form-label text-light  d-flex justify-content-center pb-2" style="font-family: 'Times New Roman', Times, serif;font-size: 25px;">Repetir Contraseñia</label>
-            <input type="password" class="form-control" id="passRepetRegister" minlength="8" maxlength="15" name="repet"> 
+            <input type="password" class="form-control" id="passRepetRegister" minlength="8" maxlength="25" name="repet"> 
             <div id="errFor"  class="text-danger text-center">Completar campo vacio</div>
+            <div id="passErrTwo" class="text-danger text-center">Las contraseñas no coinciden,volver a ingresar</div>
+ 
+
           </div>
         <div class="d-flex justify-content-center pt-4 mb-4 px-5">
         <button id="buttonInfo" type="button" class="btn btn-warning">Enviar</button>

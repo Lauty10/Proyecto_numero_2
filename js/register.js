@@ -8,6 +8,8 @@ const errThree=document.getElementById("errThree");
 const errFor=document.getElementById("errFor");
 const buttonInfo=document.getElementById("buttonInfo");
 const errFive=document.getElementById("errFive");
+const passErr=document.getElementById("passErr");
+const passErrTwo=document.getElementById("passErrTwo")
 
 
 errOne.classList.add("d-none")
@@ -15,6 +17,8 @@ errTwo.classList.add("d-none")
 errThree.classList.add("d-none")
 errFor.classList.add("d-none")
 errFive.classList.add("d-none")
+passErr.classList.add("d-none")
+passErrTwo.classList.add("d-none")
 
 
 const dataInfo={
@@ -86,16 +90,15 @@ if (dataInfo.repet!=="") {
 const ButtonTotal=()=>{
 const{name,pass,repet,email}=dataInfo
 if (pass!==repet) {
-    Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Las contraseñias no coinciden',
-      })
-      nameR.value="";
-      emailR.value="";
-      passR.value="";
-      passRepet.value="";
+  passR.value="";
+  passRepet.value=""
+  passErr.classList.remove("d-none");
+  passErrTwo.classList.remove("d-none");
+}else{
+    passErr.classList.add("d-none");
+    passErrTwo.classList.add("d-none");
 }
+
 if (!name){
     errOne.classList.remove("d-none")
     nameR.classList.add("input-error")
@@ -120,10 +123,7 @@ const valid=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const Email=emailR.value
 if (!valid.test(Email)) {
     errFive.classList.remove("d-none")
-    nameR.value="";
     emailR.value="";
-    passR.value="";
-    passRepet.value="";
 }else{
     errFive.classList.add("d-none")
 }
@@ -135,7 +135,8 @@ if (name && pass===repet && valid.test(Email)) {
         nombre:dataInfo.name,
         contrasenia:dataInfo.pass,
         correo:dataInfo.email,
-        role:"user"
+        role:"user",
+        login:false
     }
     user.push(newObjData)
     localStorage.setItem('user',JSON.stringify(user))
