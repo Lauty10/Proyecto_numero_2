@@ -82,3 +82,7 @@
      font-size: 2em;
      font-family: 'Sedgwick Ave Display', cursiva;
   }
+
+  .input-error {
+   background-color: red;
+ }
