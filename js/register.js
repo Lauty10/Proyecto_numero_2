@@ -91,8 +91,6 @@ if (pass!==repet) {
         title: 'Oops...',
         text: 'Las contraseñias no coinciden',
       })
-      nameR.value="";
-      emailR.value="";
       passR.value="";
       passRepet.value="";
 }
@@ -120,10 +118,7 @@ const valid=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const Email=emailR.value
 if (!valid.test(Email)) {
     errFive.classList.remove("d-none")
-    nameR.value="";
     emailR.value="";
-    passR.value="";
-    passRepet.value="";
 }else{
     errFive.classList.add("d-none")
 }
@@ -142,7 +137,7 @@ if (name && pass===repet && valid.test(Email)) {
     Swal.fire({
         icon: 'success',
         title: 'Genial...',
-        text: 'Iniciando Sesion',
+        text: 'Usted se registro correctamente',
       })
       nameR.value="";
       emailR.value="";
