@@ -143,7 +143,7 @@ if (name && pass===repet && valid.test(Email)) {
     Swal.fire({
         icon: 'success',
         title: 'Genial...',
-        text: 'Iniciando Sesion',
+        text: 'Usted se registro correctamente',
       })
       nameR.value="";
       emailR.value="";
