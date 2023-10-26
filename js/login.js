@@ -54,8 +54,7 @@ const ValidButtonLogin=()=>{
 const {emailInput,passInput}=ValidDate
 const datosUser=JSON.parse(localStorage.getItem('user'));
 const FilterEmail=datosUser.filter((emailLs)=>emailLs.correo===emailInput)||[];
-const FilterPass=FilterEmail.find((emailLs)=>emailLs.contrasenia===passInput)||[];
-
+const FilterPass=FilterEmail.find((passLs)=>passLs.contrasenia===passInput)||[];
 if (FilterEmail.length>0) {
     errNuv.classList.add("d-none")
  if (FilterPass.contrasenia!==passInput) {
@@ -70,14 +69,13 @@ if (FilterEmail.length>0) {
       })
       PassLogin.value=""
       emailLogin.value=""
-
       if (FilterPass.role==="admin") {
         setInterval(()=>{
             location.href="../html/Pag-admin.html"
         },2000)
       }else{
         setInterval(()=>{
-            location.href="../html/Pag-Principal-Login.html"
+            location.href="../html/Pagina-Principal-Login.html"
         },2000)
       }
 }
