@@ -149,9 +149,16 @@ if (name && pass===repet && valid.test(Email)) {
       emailR.value="";
       passR.value="";
       passRepet.value="";
-  setTimeout(()=>{
-  location.href="../html/login.html"
-   },3000)
+     if (newObjData.role==="user") {
+        setTimeout(()=>{
+            location.href="../html/Pagina-Principal-Login.html"
+        },2000)
+     } else{
+        setTimeout(()=>{
+            location.href="../html/Pag-admin.html"
+        },2000)
+     }
+ 
 }
 }
 
