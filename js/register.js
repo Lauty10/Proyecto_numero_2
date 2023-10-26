@@ -135,7 +135,7 @@ if (name && pass===repet && valid.test(Email)) {
         nombre:dataInfo.name,
         contrasenia:dataInfo.pass,
         correo:dataInfo.email,
-        role:"user",
+        role:"admin",
         login:false,
     }
     user.push(newObjData)
@@ -149,24 +149,25 @@ if (name && pass===repet && valid.test(Email)) {
       emailR.value="";
       passR.value="";
       passRepet.value="";
-
-      Email.send({
-        SecureToken:"f5196e72-6521-49b5-b524-c48d6dfba9d6",
-        Host : "smtp.elasticemail.com",
-        Username : "lautylbs@hotmail.com",
-        Password : "CD0E74F53D4BDE314B2A9B2330A554E11C23",
-        To : emailR.value,
-        From : "you@isp.com",
-        Subject : "Gracias por registrarse",
-        Body : "Gracias por registrarse en Street style, espero que le guste nuestros productos"
-    }).then(
-      message => alert(message)
-    );
-
   setTimeout(()=>{
   location.href="../html/login.html"
    },3000)
 }
+}
+
+const sendForm=()=>{
+    Email.send({
+        SecureToken : "3638cd06-4205-4602-9268-e68a45098c20",
+        Host : "smtp.elasticemail.com",
+        Username : "lautylbs@hotmail.com",
+        Password : "CD0E74F53D4BDE314B2A9B2330A554E11C23",
+        To : 'lautylbs@hotmail.com',
+        From : "lautylbs@hotmail.com",
+        Subject : "Gracias por registrarse",
+        Body : "Bienvenido a Street Style, Espero que nuestros productos sean de su agrado"
+    }).then(
+      message => alert(message)
+    );
 }
 
 
