@@ -8,6 +8,7 @@
    display: flex;
    flex-direction: column;
    min-height: 100vh;
+   overflow-y: hidden;
     }
       
    .color-nav{
@@ -85,4 +86,8 @@
 
   .input-error {
    background-color: red;
+ }
+
+ .color-button{
+   background-color: #ecec0f;
  }

@@ -168,13 +168,11 @@ const sendForm=()=>{
         Host : "smtp.elasticemail.com",
         Username : "lautylbs@hotmail.com",
         Password : "CD0E74F53D4BDE314B2A9B2330A554E11C23",
-        To : 'lautylbs@hotmail.com',
+        To : emailR.value,
         From : "lautylbs@hotmail.com",
         Subject : "Gracias por registrarse",
         Body : "Bienvenido a Street Style, Espero que nuestros productos sean de su agrado"
-    }).then(
-      message => alert(message)
-    );
+    })
 }
 
 
