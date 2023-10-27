@@ -144,7 +144,8 @@ if (name && pass===repet && valid.test(Email)) {
         icon: 'success',
         title: 'Genial...',
         text: 'Usted se registro correctamente',
-      })
+      });
+      sendForm();
       nameR.value="";
       emailR.value="";
       passR.value="";
@@ -159,7 +160,7 @@ if (name && pass===repet && valid.test(Email)) {
         setTimeout(()=>{
             location.href="../html/Pagina-Principal-Login.html"
         },2000)
-     } else{
+     }else{
         const idFinalAd = newObjData.id;
         const userIndexAd = user.findIndex((usuarioAd) => usuarioAd.id === idFinalAd);
         if (userIndexAd !== -1) {
@@ -170,7 +171,6 @@ if (name && pass===repet && valid.test(Email)) {
             location.href="../html/Pag-admin.html"
         },2000)
      }
- 
 }
 }
 
@@ -186,7 +186,6 @@ const sendForm=()=>{
         Body : "Bienvenido a Street Style, Espero que nuestros productos sean de su agrado"
     })
 }
-
 
 nameR.addEventListener("input",ValueInput)
 emailR.addEventListener("input",ValueInputTwo)
