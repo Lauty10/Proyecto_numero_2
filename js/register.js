@@ -187,6 +187,8 @@ const sendForm=()=>{
     })
 }
 
+
+
 nameR.addEventListener("input",ValueInput)
 emailR.addEventListener("input",ValueInputTwo)
 passR.addEventListener("input",ValueInputThree)
