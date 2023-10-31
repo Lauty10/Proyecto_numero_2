@@ -1,0 +1,114 @@
+*{margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+       }
+
+    body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+     }
+
+    .color-nav{
+     background-color: #ecec0f;
+    }
+
+       .logo{
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        margin-top: 5px
+       }
+       .navbar{
+       height: auto;
+       }
+
+       footer{
+       background-color: #ecec0f;
+       padding: 1em 0;
+       margin-top: auto;
+       }
+
+       #logo-footer{
+        width: 6em;
+        height: 6em;
+        border-radius: 50%;
+        margin-top: 5px
+       }
+       #exampleModals #exampleModal {
+         z-index: 1100;
+      }
+
+    #exampleModals .modal-content {
+   color: rgb(5, 5, 5)
+     }
+
+#exampleModals .modal-content {
+   background-color: rgba(194, 194, 194, 0.869);
+ }
+
+ .btn-color{
+   background-color: rgba(234, 239, 88, 0.664);
+ }
+
+ #exampleModal .modal-content {
+  color: rgb(5, 5, 5)
+    }
+
+    #exampleModal .modal-content {
+      background-color: rgba(194, 194, 194, 0.869);
+    }
+
+    .btn-colorTwo{
+      background-color: rgba(234, 239, 88, 0.664);
+    }
+
+
+@media (max-width: 484px) {
+  .modal-title {
+    font-size: 17px;
+  }
+
+  .form-control {
+    font-size: 14px;
+  }
+
+  .user-id, td {
+    font-size: 10px;
+  }
+
+
+  .row {
+    margin-bottom: 3px;
+  }
+
+
+  .col {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .modal-title {
+    font-size: 16px;
+  }
+
+  .form-control {
+    font-size: 12px;
+  }
+
+  .user-id, td {
+    font-size: 10px;
+  }
+
+
+  .row {
+    margin-bottom: 3px;
+  }
+
+
+  .col {
+    width: 100%;
+  }
+
+}
