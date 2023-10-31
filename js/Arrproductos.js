@@ -160,6 +160,3 @@ productModal._element.addEventListener('hidden.bs.modal', function () {
     element.classList.add("d-none");
   });
 });
-
-
-

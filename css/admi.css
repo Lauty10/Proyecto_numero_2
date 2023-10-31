@@ -3,6 +3,7 @@
     box-sizing: border-box;
        }
        
+
     body{
     display: flex;
     flex-direction: column;
@@ -13,6 +14,11 @@
      background-color: #ecec0f;
     }
        
+
+    .color-nav{
+     background-color: #ecec0f;
+    }
+
        .logo{
         width: 3em;
         height: 3em;
@@ -23,12 +29,14 @@
        height: auto;
        }
        
+
        footer{
        background-color: #ecec0f;
        padding: 1em 0;
        margin-top: auto;
        }
        
+
        #logo-footer{
         width: 6em;
         height: 6em;
@@ -39,6 +47,7 @@
          z-index: 1100;
       }
  
+
     #exampleModals .modal-content {
    color: rgb(5, 5, 5)
      }
@@ -51,6 +60,11 @@
    background-color: rgba(234, 239, 88, 0.664); 
  }
  
+
+ .btn-color{
+   background-color: rgba(234, 239, 88, 0.664);
+ }
+
  #exampleModal .modal-content {
   color: rgb(5, 5, 5)
     }
@@ -61,6 +75,11 @@
 
     .btn-colorTwo{
       background-color: rgba(234, 239, 88, 0.664); 
+      background-color: rgba(194, 194, 194, 0.869);
+    }
+
+    .btn-colorTwo{
+      background-color: rgba(234, 239, 88, 0.664);
     }
 
 
@@ -69,6 +88,7 @@
     font-size: 17px;
   }
   
+
   .form-control {
     font-size: 14px;
   }
@@ -83,6 +103,7 @@
   }
   
 
+
   .col {
     width: 100%;
   }
@@ -93,6 +114,7 @@
     font-size: 16px;
   }
   
+
   .form-control {
     font-size: 12px;
   }
@@ -111,4 +133,5 @@
     width: 100%;
   }
   
+
 }

@@ -145,7 +145,6 @@ const createNewUserAd=()=>{
     correo:createNewEmail,
     login:false
   }
-  
   const validEmail=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const Email=createNewEmail
 
@@ -162,7 +161,6 @@ if (!validEmail.test(Email)) {
 
   if (createNewEmail==="") {
     modalErrTwo.classList.remove("d-none");
-   
   }
 
   if (createNewRole==="") {
@@ -208,4 +206,3 @@ myModal._element.addEventListener('hidden.bs.modal', function () {
   });
   location.reload();
 });
-
