@@ -50,41 +50,50 @@ if (PassLogin.value==="") {
 }
  }
     
-const ValidButtonLogin=()=>{
-const {emailInput,passInput}=ValidDate
-const datosUser=JSON.parse(localStorage.getItem('user'));
-const FilterEmail=datosUser.filter((emailLs)=>emailLs.correo===emailInput)||[];
-const FilterPass=FilterEmail.find((passLs)=>passLs.contrasenia===passInput)||[];
-if (FilterEmail.length>0) {
-    errNuv.classList.add("d-none")
- if (FilterPass.contrasenia!==passInput) {
-    errOcho.classList.remove("d-none")
-    PassLogin.value=""  
-}else{
-    errOcho.classList.add("d-none")
-    Swal.fire({
-        icon: 'success',
-        title: 'Genial...',
-        text: 'Iniciado Sesion',
-      })
-      PassLogin.value=""
-      emailLogin.value=""
-      if (FilterPass.role==="admin") {
-        setInterval(()=>{
-            location.href="../html/Pag-admin.html"
-        },2000)
-      }else{
-        setInterval(()=>{
-            location.href="../html/Pagina-Principal-Login.html"
-        },2000)
-      }
-}
+ const ValidButtonLogin = () => {
+    const { emailInput, passInput } = ValidDate;
+    const datosUser = JSON.parse(localStorage.getItem('user'));
+    const FilterEmail = datosUser.filter((emailLs) => emailLs.correo === emailInput);
+    const FilterPass = FilterEmail.find((passLs) => passLs.contrasenia === passInput);
+    
+        if (FilterEmail.length > 0) {
+        errNuv.classList.add("d-none");
+        if (FilterPass && FilterPass.contrasenia === passInput) {
+            errOcho.classList.add("d-none");
 
+            // 
+                const individualUser = {
+                id: FilterPass.id, 
+                username: FilterPass.nombre, 
+                role: FilterPass.role,
+            };
 
-}else{
-    errNuv.classList.remove("d-none")
-    emailLogin.value=""
-}
+            
+            localStorage.setItem('individualUser', JSON.stringify(individualUser));
+
+            Swal.fire({
+                icon: 'success',
+                title: 'Genial...',
+                text: 'Iniciado Sesión',
+            });
+
+            PassLogin.value = "";
+            emailLogin.value = "";
+
+            if (FilterPass.role === "admin") {
+                setTimeout(() => {
+                    location.href = "../html/Pag-admin.html";
+                }, 2000);
+            } else {
+                setTimeout(() => {
+                    location.href = "../html/Pagina-Principal-Login.html";
+                }, 2000);
+            }
+        } else {
+            errOcho.classList.remove("d-none");
+            PassLogin.value = "";
+        }
+    }
 }
 
 emailLogin.addEventListener('input',ValidEmail);

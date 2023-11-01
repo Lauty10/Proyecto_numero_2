@@ -1,4 +1,4 @@
-const usLsProduct = JSON.parse(localStorage.getItem('localProducts')) || [];
+let usLsProduct = JSON.parse(localStorage.getItem('localProducts')) || productsStreetStyle;
 const bodyTableProducts=document.getElementById("body-table-products");
 const productErrOne=document.getElementById("productErrOne");
 const productErrTwo=document.getElementById("productErrTwo");
@@ -66,12 +66,14 @@ const deleteProduct = (productId) => {
     if (confirmDelete) {
       const filteredProducts = usLsProduct.filter((product) => product.id !== productId);
       localStorage.setItem('localProducts', JSON.stringify(filteredProducts));
+      usLsProduct = filteredProducts; 
       window.location.reload();
     }
   } else {
     alert("Producto no encontrado");
   }
 }
+
 
 const upDateProduct = (ev) => {
   const actulization = usLsProduct.map((productEdit) => {

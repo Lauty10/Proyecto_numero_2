@@ -128,6 +128,7 @@ if (!valid.test(Email)) {
     errFive.classList.add("d-none")
 }
 if (name && pass===repet && valid.test(Email)) {
+    const individualUser =JSON.parse(localStorage.getItem("individualUser"))||[]
     const user=JSON.parse(localStorage.getItem("user"))||[]
     const id= user.length>0 ? user[user.length-1].id + 1 : 1;
     const newObjData={
@@ -138,6 +139,13 @@ if (name && pass===repet && valid.test(Email)) {
         role:"admin",
         login:false,
     }
+    const newObjDataIndivual={
+        nombre:dataInfo.name,
+        role:"user",
+        login:false,
+    }
+    individualUser.push(newObjDataIndivual); 
+    localStorage.setItem('individualUser',JSON.stringify(individualUser))
     user.push(newObjData)
     localStorage.setItem('user',JSON.stringify(user))
     Swal.fire({

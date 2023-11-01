@@ -192,17 +192,3 @@ if (!validEmail.test(Email)) {
   }
 }
 
-
-myModal._element.addEventListener('hidden.bs.modal', function () {
-  document.getElementById("createNewName").value = "";
-  document.getElementById("createNewEmail").value = "";
-  document.getElementById("createNewRole").value = "";
-  document.getElementById("createNewPass").value = "";
-  document.getElementById("createNewPassRepet").value = "";
-
-  const errorElements = document.querySelectorAll(".text-danger");
-  errorElements.forEach((element) => {
-    element.classList.add("d-none");
-  });
-  location.reload();
-});
