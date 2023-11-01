@@ -1,4 +1,3 @@
-const DeleteSesion = document.getElementById("DeleteSesion");
 
 const logOut = () => {
     const userIndividual = JSON.parse(localStorage.getItem('individualUser')) || {};
@@ -16,4 +15,4 @@ const logOut = () => {
     }
 }
 
-DeleteSesion.addEventListener('click', logOut);
+
