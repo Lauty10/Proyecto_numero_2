@@ -1,0 +1,63 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+    }
+    
+body{
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+
+}
+    
+    .color-nav{
+background-color: #ecec0f;
+}
+    
+.logo{
+ width: 3em;
+ height: 3em;
+ border-radius: 50%;
+ margin-top: 5px
+}
+    .navbar{
+    height: auto;
+    }
+    
+    footer{
+background-color: #ecec0f;
+    padding: 1em 0;
+    margin-top: auto;
+    }
+    
+#logo-footer{
+ width: 6em;
+ height: 6em;
+ border-radius: 50%;
+ margin-top: 5px
+}
+
+#card-1 img {
+    height: 300px; 
+}
+
+#card-2 img{
+    height: 280px;
+}
+
+#card-5 img{
+    height: 265px;
+}
+#color-body{
+    background-color: black;
+}
+
+.card {
+    border: 3px solid yellow; 
+    box-shadow: 0 0 10px yellow; 
+}
+
+main {
+    margin-top: 100px; 
+  }

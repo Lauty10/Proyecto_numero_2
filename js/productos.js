@@ -5,7 +5,7 @@ const productsStreetStyle = [
       precio: 30000,
       marca: "Nike",
       descripcion: "Zapatillas nike, estilo urbanas.",
-      imagen: "zapatillas.jpeg",
+      imagen: "https://images.pexels.com/photos/1570867/pexels-photo-1570867.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
       id: 2,
@@ -13,7 +13,7 @@ const productsStreetStyle = [
       precio: 45000,
       marca: "Camiseta seleccion Argentina",
       descripcion: "Camiseta de la selección Argentina",
-      imagen: "CamisetaAfa.jpg",
+      imagen: "https://portal.andina.pe/EDPfotografia3/Thumbnail/2022/12/26/000921527W.jpg",
     },
     {
       id: 3,
@@ -21,7 +21,7 @@ const productsStreetStyle = [
       precio: 20000,
       marca: "Nike",
       descripcion: "Short deportivo para tus entrenamientos.",
-      imagen: "short.jpg",
+      imagen: "https://www.elpalaciodehierro.com/on/demandware.static/-/Sites-palacio-master-catalog/default/dw51a81921/images/40441791/large/40441791_x1.jpg",
     },
     {
       id: 4,
@@ -29,7 +29,7 @@ const productsStreetStyle = [
       precio: 8000,
       marca: "Socks",
       descripcion: "Medias para que puedas practicar y entrenar",
-      imagen: "medias.jpg",
+      imagen: "https://dasock.com.uy/wp-content/uploads/2021/06/Futbol-Blanca-1024x1024.jpg",
     },
     {
       id: 5,
@@ -37,7 +37,7 @@ const productsStreetStyle = [
       precio: 28000,
       marca: "Adidas",
       descripcion: "Mochila espaciosa y duradera para llevar tus pertenencias al gimnasio o tus actividades al aire libre.",
-      imagen: "mochila.jpg",
+      imagen: "https://th.bing.com/th/id/R.487ee436fa4a066cb46502b51609e7f5?rik=D65qNYrb33nZGw&pid=ImgRaw&r=0",
     },
     {
       id: 6,
@@ -45,7 +45,7 @@ const productsStreetStyle = [
       precio: 18000,
       marca: "Flash",
       descripcion: "Remera térmica para tus actividades al aire libre.",
-      imagen: "termico.jpg",
+      imagen: "https://th.bing.com/th/id/OIP.gB6xPujFHpcAVdFoaFpw7AHaHa?pid=ImgDet&rs=1",
     },
   ];
 localStorage.setItem('localProducts',JSON.stringify(productsStreetStyle));

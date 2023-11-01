@@ -3,13 +3,9 @@ const bodyTableProducts=document.getElementById("body-table-products");
 const productErrOne=document.getElementById("productErrOne");
 const productErrTwo=document.getElementById("productErrTwo");
 const productErrThree=document.getElementById("productErrThree");
-
 productErrOne.classList.add("d-none");
 productErrThree.classList.add("d-none");
 productErrTwo.classList.add("d-none");
-
-
-
 bodyTableProducts.innerHTML = usLsProduct.map((product) => `
   <tr>
     <th scope="row" class="user-id">${product.id}</th>
