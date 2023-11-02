@@ -1,21 +1,17 @@
-const usLsProduct = JSON.parse(localStorage.getItem('localProducts')) || [];
+let usLsProduct = JSON.parse(localStorage.getItem('localProducts'))||[];
 const bodyTableProducts=document.getElementById("body-table-products");
 const productErrOne=document.getElementById("productErrOne");
 const productErrTwo=document.getElementById("productErrTwo");
 const productErrThree=document.getElementById("productErrThree");
-
 productErrOne.classList.add("d-none");
 productErrThree.classList.add("d-none");
 productErrTwo.classList.add("d-none");
-
-
-
 bodyTableProducts.innerHTML = usLsProduct.map((product) => `
   <tr>
     <th scope="row" class="user-id">${product.id}</th>
     <td>${product.nombre}</td>
     <td>${product.precio}</td>
-    <td>${product.marca}</td>
+    <td>${product.categoria}</td>
     <td class="col">
         <div class="row">
             <div class="col">
@@ -66,12 +62,14 @@ const deleteProduct = (productId) => {
     if (confirmDelete) {
       const filteredProducts = usLsProduct.filter((product) => product.id !== productId);
       localStorage.setItem('localProducts', JSON.stringify(filteredProducts));
+      usLsProduct = filteredProducts; 
       window.location.reload();
     }
   } else {
     alert("Producto no encontrado");
   }
 }
+
 
 const upDateProduct = (ev) => {
   const actulization = usLsProduct.map((productEdit) => {
@@ -172,4 +170,5 @@ productModal._element.addEventListener('hidden.bs.modal', function () {
     element.classList.add("d-none");
   });
 });
+}
 

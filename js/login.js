@@ -50,42 +50,44 @@ if (PassLogin.value==="") {
 }
  }
     
-const ValidButtonLogin=()=>{
-const {emailInput,passInput}=ValidDate
-const datosUser=JSON.parse(localStorage.getItem('user'));
-const FilterEmail=datosUser.filter((emailLs)=>emailLs.correo===emailInput)||[];
-const FilterPass=FilterEmail.find((passLs)=>passLs.contrasenia===passInput)||[];
-if (FilterEmail.length>0) {
-    errNuv.classList.add("d-none")
- if (FilterPass.contrasenia!==passInput) {
-    errOcho.classList.remove("d-none")
-    PassLogin.value=""  
-}else{
-    errOcho.classList.add("d-none")
-    Swal.fire({
-        icon: 'success',
-        title: 'Genial...',
-        text: 'Iniciado Sesion',
-      })
-      PassLogin.value=""
-      emailLogin.value=""
-      if (FilterPass.role==="admin") {
-        setInterval(()=>{
-            location.href="../html/Pag-admin.html"
-        },2000)
-      }else{
-        setInterval(()=>{
-            location.href="../html/Pagina-Principal-Login.html"
-        },2000)
-      }
+ const ValidButtonLogin = () => {
+    const {emailInput,passInput } = ValidDate;
+    const individual = {
+        correo: emailInput,
+        login: true,
+    };
+    localStorage.setItem("individualUser",JSON.stringify(individual));
+    const datosUser = JSON.parse(localStorage.getItem('user'));
+    const FilterEmail = datosUser.find((user) => user.correo === emailInput);
+    const filterPosition=datosUser.findIndex((positionLs)=>positionLs.correo === emailInput);
+    if (FilterEmail &&FilterEmail.contrasenia === passInput) {
+        Swal.fire({
+            icon: 'success',
+            title: 'Genial...',
+            text: 'Iniciado Sesión',
+        });
+
+        PassLogin.value = "";
+        emailLogin.value = "";
+
+        setTimeout(() => {
+            datosUser[filterPosition].login=true
+            localStorage.setItem('user',JSON.stringify(datosUser));
+            if (FilterEmail.role === "admin") {
+                location.href = "../html/Pag-admin.html";
+            } else {
+                datosUser[filterPosition].login=true
+                localStorage.setItem('user',JSON.stringify(datosUser));
+                location.href = "../html/Pagina-Principal-Login.html";
+            }
+        }, 2000);
+    } else {
+        errNuv.classList.remove("d-none");
+        errOcho.classList.remove("d-none");
+        PassLogin.value = "";
+    }
 }
 
-
-}else{
-    errNuv.classList.remove("d-none")
-    emailLogin.value=""
-}
-}
 
 emailLogin.addEventListener('input',ValidEmail);
 PassLogin.addEventListener('input',ValidPass);

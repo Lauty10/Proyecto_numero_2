@@ -2,12 +2,18 @@
     padding: 0;
     box-sizing: border-box;
        }
+       
 
     body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
      }
+       
+    .color-nav{
+     background-color: #ecec0f;
+    }
+       
 
     .color-nav{
      background-color: #ecec0f;
@@ -22,12 +28,14 @@
        .navbar{
        height: auto;
        }
+       
 
        footer{
        background-color: #ecec0f;
        padding: 1em 0;
        margin-top: auto;
        }
+       
 
        #logo-footer{
         width: 6em;
@@ -38,14 +46,20 @@
        #exampleModals #exampleModal {
          z-index: 1100;
       }
+ 
 
     #exampleModals .modal-content {
    color: rgb(5, 5, 5)
      }
 
 #exampleModals .modal-content {
-   background-color: rgba(194, 194, 194, 0.869);
+   background-color: rgba(194, 194, 194, 0.869); 
  }
+
+ .btn-color{
+   background-color: rgba(234, 239, 88, 0.664); 
+ }
+ 
 
  .btn-color{
    background-color: rgba(234, 239, 88, 0.664);
@@ -56,6 +70,11 @@
     }
 
     #exampleModal .modal-content {
+      background-color: rgba(194, 194, 194, 0.869); 
+    }
+
+    .btn-colorTwo{
+      background-color: rgba(234, 239, 88, 0.664); 
       background-color: rgba(194, 194, 194, 0.869);
     }
 
@@ -68,6 +87,7 @@
   .modal-title {
     font-size: 17px;
   }
+  
 
   .form-control {
     font-size: 14px;
@@ -81,6 +101,7 @@
   .row {
     margin-bottom: 3px;
   }
+  
 
 
   .col {
@@ -92,6 +113,7 @@
   .modal-title {
     font-size: 16px;
   }
+  
 
   .form-control {
     font-size: 12px;
@@ -110,5 +132,6 @@
   .col {
     width: 100%;
   }
+  
 
 }

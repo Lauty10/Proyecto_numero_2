@@ -128,6 +128,12 @@ if (!valid.test(Email)) {
     errFive.classList.add("d-none")
 }
 if (name && pass===repet && valid.test(Email)) {
+    const individual = {
+        correo: dataInfo.email,
+        login: false,
+    };
+    localStorage.getItem("individualUser",JSON.stringify(individual))
+
     const user=JSON.parse(localStorage.getItem("user"))||[]
     const id= user.length>0 ? user[user.length-1].id + 1 : 1;
     const newObjData={
@@ -135,7 +141,7 @@ if (name && pass===repet && valid.test(Email)) {
         nombre:dataInfo.name,
         contrasenia:dataInfo.pass,
         correo:dataInfo.email,
-        role:"admin",
+        role:"user",
         login:false,
     }
     user.push(newObjData)
@@ -156,6 +162,8 @@ if (name && pass===repet && valid.test(Email)) {
         if (userIndex !== -1) {
           user[userIndex].login = true;
           localStorage.setItem('user', JSON.stringify(user));
+          individual.login = true;
+          localStorage.setItem('individualUser', JSON.stringify(individual));
         }
         setTimeout(()=>{
             location.href="../html/Pagina-Principal-Login.html"
@@ -166,6 +174,8 @@ if (name && pass===repet && valid.test(Email)) {
         if (userIndexAd !== -1) {
           user[userIndexAd].login = true;
           localStorage.setItem('user', JSON.stringify(user));
+          individual.login = true;
+          localStorage.setItem('individualUser', JSON.stringify(individual));
         }
         setTimeout(()=>{
             location.href="../html/Pag-admin.html"
@@ -186,6 +196,8 @@ const sendForm=()=>{
         Body : "Bienvenido a Street Style, Espero que nuestros productos sean de su agrado"
     })
 }
+
+
 
 nameR.addEventListener("input",ValueInput)
 emailR.addEventListener("input",ValueInputTwo)

@@ -1,4 +1,3 @@
-
 const usLs = JSON.parse(localStorage.getItem('user')) || [];
 const bodyTable = document.getElementById("body-table");
 const modalErrOne=document.getElementById("modalErrOne");
@@ -146,7 +145,6 @@ const createNewUserAd=()=>{
     correo:createNewEmail,
     login:false
   }
-
   const validEmail=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const Email=createNewEmail
 
@@ -163,7 +161,6 @@ if (!validEmail.test(Email)) {
 
   if (createNewEmail==="") {
     modalErrTwo.classList.remove("d-none");
-
   }
 
   if (createNewRole==="") {
@@ -195,17 +192,3 @@ if (!validEmail.test(Email)) {
   }
 }
 
-
-myModal._element.addEventListener('hidden.bs.modal', function () {
-  document.getElementById("createNewName").value = "";
-  document.getElementById("createNewEmail").value = "";
-  document.getElementById("createNewRole").value = "";
-  document.getElementById("createNewPass").value = "";
-  document.getElementById("createNewPassRepet").value = "";
-
-  const errorElements = document.querySelectorAll(".text-danger");
-  errorElements.forEach((element) => {
-    element.classList.add("d-none");
-  });
-  location.reload();
-});
