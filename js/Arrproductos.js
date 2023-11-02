@@ -114,7 +114,18 @@ const upDateProduct = (ev) => {
   localStorage.setItem('localProducts', JSON.stringify(validDate));
   window.location.reload();
 
-
+  const DestacarProduct= (ds)=>{
+    const productosDestacados = JSON.parse(localStorage.getItem("productDs")) || []
+    const productDsFilter = usLsProduct.filter((dss)=> dss.id ===Number(ds) )
+    if (productosDestacados.length>0){
+      const confirmCambio = confirm("esta seguro que desea cambiar el producto destacado?")
+      if (confirmCambio) {
+      localStorage.setItem("productDs",JSON.stringify(productDsFilter))
+      }
+    }else{
+      localStorage.setItem("productDs",JSON.stringify(productDsFilter))
+    }
+  }
 
 createNewProductDate=()=>{
   const nameProduct=document.getElementById("nameProduct").value;
