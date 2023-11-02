@@ -21,7 +21,7 @@ const productsStreetStyle = [
       precio: 20000,
       categoria: "Shorts",
       descripcion: "Short deportivo para tus entrenamientos.",
-      imagen: "https://www.elpalaciodehierro.com/on/demandware.static/-/Sites-palacio-master-catalog/default/dw51a81921/images/40441791/large/40441791_x1.jpg",
+      imagen: "https://falabella.scene7.com/is/image/FalabellaPE/16741094_1?wid=800&hei=800&qlt=70",
     },
     {
       id: 4,

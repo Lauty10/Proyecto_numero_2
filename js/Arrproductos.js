@@ -1,4 +1,4 @@
-let usLsProduct = JSON.parse(localStorage.getItem('localProducts')) || productsStreetStyle;
+let usLsProduct = JSON.parse(localStorage.getItem('localProducts'))||[];
 const bodyTableProducts=document.getElementById("body-table-products");
 const productErrOne=document.getElementById("productErrOne");
 const productErrTwo=document.getElementById("productErrTwo");
@@ -11,7 +11,7 @@ bodyTableProducts.innerHTML = usLsProduct.map((product) => `
     <th scope="row" class="user-id">${product.id}</th>
     <td>${product.nombre}</td>
     <td>${product.precio}</td>
-    <td>${product.marca}</td>
+    <td>${product.categoria}</td>
     <td class="col">
         <div class="row">
             <div class="col">
