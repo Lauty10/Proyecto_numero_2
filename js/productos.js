@@ -2,50 +2,57 @@ const productsStreetStyleArr = [
     {
       id: 1,
       nombre: "Zapatillas Nike Street Style special Edition",
-      precio: 30000,
+      precio: "El precio de las zapatillas es de $33000",
       categoria: "Zapatillas",
       descripcion: "Zapatillas nike, estilo urbanas.",
       imagen: "https://images.pexels.com/photos/1570867/pexels-photo-1570867.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      verso:"No te quedes sin demostrar tu mejor version, con la colaboracion de Nike & Street Style tendras las zapatiilas con mas estilo del 2023. "
+
     },
     {
       id: 2,
       nombre: "Camiseta seleccion Argentina",
-      precio: 45000,
+      precio: "El precio de la camiseta es de %30000",
       categoria: "Camisetas",
       descripcion: "Camiseta de la selección Argentina",
-      imagen: "https://portal.andina.pe/EDPfotografia3/Thumbnail/2022/12/26/000921527W.jpg",
+      imagen: "https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fwww.camisetasfutbol-replicas.com%2Fimages%2FCopa%2520Mundial%25202022%2FArgentina%2FPrimera_Camiseta_Argentina_2022_%282XL-4XL%29.jpg",
+      verso:"No te quedes sin demostrar tu mejor version, con la camiseta de la seleccion campeona del mundo en Qatar 2022"
     },
     {
       id: 3,
       nombre: "Short deportivo",
-      precio: 20000,
+      precio: "El precio del short es de $10000",
       categoria: "Shorts",
       descripcion: "Short deportivo para tus entrenamientos.",
       imagen: "https://falabella.scene7.com/is/image/FalabellaPE/16741094_1?wid=800&hei=800&qlt=70",
+      verso:"No te quedes sin demotrar tu mejor version, con el short deportivo para hacer mejor tus entrenamientos"
     },
     {
       id: 4,
       nombre: "Medias antideslizantes",
-      precio: 8000,
+      precio: "El precio de las medias es de $8000",
       categoria: "Medias",
       descripcion: "Medias para que puedas practicar y entrenar",
-      imagen: "https://dasock.com.uy/wp-content/uploads/2021/06/Futbol-Blanca-1024x1024.jpg",
+      imagen: "https://deporstore.com/wp-content/uploads/2017/11/truNegra-480x480.jpg",
+      verso:"No te quedes sin demotrar tu mejor version, con las medias antideslizantes para correr con la mejor proteccion"
     },
     {
       id: 5,
       nombre: "Mochila deportiva",
-      precio: 28000,
+      precio: "El precio de este producto es de $28000",
       categoria: "Mochilas",
       descripcion: "Mochila espaciosa y duradera para llevar tus pertenencias al gimnasio o tus actividades al aire libre.",
-      imagen: "https://http2.mlstatic.com/mochila-futbol-adidas-stadium-ii-team-gray-hydroshield-ultra-D_NQ_NP_657863-MLM31903040575_082019-F.jpg",
+      imagen: "https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fwww.opensports.com.ar%2Fmedia%2Fcatalog%2Fproduct%2Fcache%2F4769e4d9f3516e60f2b4303f8e5014a8%2FF%2FS%2FFS8349_0.jpg",
+      verso:"No te quedes sin demotrar tu mejor version, con la mochila deportiva donde podras llevar toda tu indumentaria"
     },
     {
       id: 6,
       nombre: "Remera térmica deportiva",
-      precio: 18000,
+      precio: "El precio de este producto es de $15000",
       categoria: "Termico",
       descripcion: "Remera térmica para tus actividades al aire libre.",
-      imagen: "https://th.bing.com/th/id/OIP.gB6xPujFHpcAVdFoaFpw7AHaHa?pid=ImgDet&rs=1",
+      imagen: "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/110/921/products/flamrem11-e0b51bf4f8433d821d16001054665965-1024-10241-d934a882209ba5460216194529950435-480-0.jpg",
+      verso:"No te quedes sin demotrar tu mejor version, con la remera termica deportiva para cuidarte de los climas extremos"
     },
   ];
 

@@ -9,7 +9,7 @@ body{
     flex-direction: column;
     min-height: 100vh;
     background-color: black;
-
+ 
     
 }
 .color-nav{
@@ -43,15 +43,36 @@ margin-top: auto;
     background-color: black;
 }
 
-#product-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh; 
+
+
+#prodVista {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  text-align: center;
+}
+
+
+
+
+.card-text {
+  color: yellow;
+  font-family: 'Kenia', sans-serif;
+  font-size: 30px;
+}
+
+.imagen-tienda {
+  max-width: 30%;
+  height: auto;
+  color: rgb(80, 81, 83);
+}
+
+
+@media (max-width: 768px) { 
+    h1 {
+      margin-top: 70px;
+    }
   }
 
-  .color-container{
-background-color: rgba(173, 173, 150, 0.412);
-  }
-  
+
