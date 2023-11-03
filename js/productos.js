@@ -1,4 +1,4 @@
-const productsStreetStyle = [
+const productsStreetStyleArr = [
     {
       id: 1,
       nombre: "Zapatillas Nike Street Style special Edition",
@@ -37,7 +37,7 @@ const productsStreetStyle = [
       precio: 28000,
       categoria: "Mochilas",
       descripcion: "Mochila espaciosa y duradera para llevar tus pertenencias al gimnasio o tus actividades al aire libre.",
-      imagen: "https://th.bing.com/th/id/R.487ee436fa4a066cb46502b51609e7f5?rik=D65qNYrb33nZGw&pid=ImgRaw&r=0",
+      imagen: "https://http2.mlstatic.com/mochila-futbol-adidas-stadium-ii-team-gray-hydroshield-ultra-D_NQ_NP_657863-MLM31903040575_082019-F.jpg",
     },
     {
       id: 6,
@@ -48,7 +48,12 @@ const productsStreetStyle = [
       imagen: "https://th.bing.com/th/id/OIP.gB6xPujFHpcAVdFoaFpw7AHaHa?pid=ImgDet&rs=1",
     },
   ];
-localStorage.setItem('localProducts',JSON.stringify(productsStreetStyle));
+
+  function guardarProductosEnLocalStorage(productos) {
+    localStorage.setItem('localProducts',JSON.stringify(productos));
+  }
+  guardarProductosEnLocalStorage(productsStreetStyleArr);
+  
 
 
 
