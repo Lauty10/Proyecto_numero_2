@@ -12,7 +12,7 @@ divsCards.innerHTML = arrProducts
             <div class="card-body">
                 <h5 class="card-title">${products.nombre}</h5>
                 <p class="card-text">${products.descripcion}</p>
-                <a href="../html/Pag-detalle.html?id=${products.id}" class="btn btn-warning">Ver producto</a>
+                <a href="../html/detalle.html?id=${products.id}" class="btn btn-warning">Ver producto</a>
             </div>
         </div>
     </div>
