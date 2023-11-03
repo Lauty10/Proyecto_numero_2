@@ -46,32 +46,25 @@
        #exampleModals #exampleModal {
          z-index: 1100;
       }
- 
 
-    #exampleModals .modal-content {
-   color: rgb(5, 5, 5)
-     }
+#createUserModal  .modal-content {
+  color: rgb(5, 5, 5);
+  background-color: rgba(194, 194, 194, 0.869);
+}
 
-#exampleModals .modal-content {
-   background-color: rgba(194, 194, 194, 0.869); 
- }
 
- .btn-color{
-   background-color: rgba(234, 239, 88, 0.664); 
- }
- 
+#createUserModal .btn-color {
+  background-color: rgba(234, 239, 88, 0.664);
+}
 
- .btn-color{
-   background-color: rgba(234, 239, 88, 0.664);
- }
+#exampleModal  .modal-content {
+  color: rgb(5, 5, 5);
+  background-color: rgba(194, 194, 194, 0.869);
+}
 
- #exampleModal .modal-content {
-  color: rgb(5, 5, 5)
-    }
-
-    #exampleModal .modal-content {
-      background-color: rgba(194, 194, 194, 0.869); 
-    }
+#exampleModal .btn-color {
+  background-color: rgba(234, 239, 88, 0.664);
+}
 
     .btn-colorTwo{
       background-color: rgba(234, 239, 88, 0.664); 

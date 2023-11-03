@@ -49,10 +49,10 @@ const productsStreetStyleArr = [
     },
   ];
 
-  function guardarProductosEnLocalStorage(productos) {
-    localStorage.setItem('localProducts',JSON.stringify(productos));
+  const Products=()=>{
+    localStorage.setItem('localProducts',JSON.stringify(productsStreetStyleArr));
   }
-  guardarProductosEnLocalStorage(productsStreetStyleArr);
+  Products();
   
 
 
