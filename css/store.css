@@ -43,12 +43,25 @@ background-color: #ecec0f;
 }
 
 #card-2 img{
-    height: 280px;
+    height: 300px;
+}
+
+#card-3 img{
+    height: 300px;
+}
+
+#card-4 img{
+    height: 300px;
 }
 
 #card-5 img{
-    height: 265px;
+    height: 280px;
 }
+
+#card-6 img{
+    height: 305px;
+}
+
 #color-body{
     background-color: black;
 }
@@ -59,5 +72,15 @@ background-color: #ecec0f;
 }
 
 main {
-    margin-top: 100px; 
+    margin-top: 90px; 
   }
+
+.form-control {
+    width: 100%; 
+  }
+  
+  @media (max-width: 400px) {
+    .form-control {
+      width: 120%; 
+  }
+}
