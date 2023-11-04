@@ -57,7 +57,11 @@ const productsStreetStyleArr = [
   ];
 
   const Products=()=>{
-    localStorage.setItem('localProducts',JSON.stringify(productsStreetStyleArr));
+    const productoLs=JSON.parse(localStorage.getItem('localProducts'))||[]
+    if (productoLs.length===0) {
+      localStorage.setItem('localProducts',JSON.stringify(productsStreetStyleArr));
+    }
+    
   }
   Products();
   

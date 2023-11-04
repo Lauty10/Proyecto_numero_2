@@ -1,4 +1,5 @@
 const usLs = JSON.parse(localStorage.getItem('user')) || [];
+const individualUser=JSON.parse(localStorage.getItem('individualUser'));
 const bodyTable = document.getElementById("body-table");
 const modalErrOne=document.getElementById("modalErrOne");
 const modalErrTwo=document.getElementById("modalErrTwo");
@@ -24,7 +25,7 @@ modalErrTen.classList.add("d-none");
 
 
 
-bodyTable.innerHTML = usLs.map((usuario) => `
+bodyTable.innerHTML = usLs.filter((usuario)=>usuario.correo!==individualUser.correo).map((usuario) => `
   <tr>
     <th scope="row" class="user-id">${usuario.id}</th>
     <td>${usuario.nombre}</td>
