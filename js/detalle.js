@@ -6,7 +6,9 @@ const filterUbication = ubicationData.filter((fb) => fb.id == Number(idProd));
 divMap.innerHTML = `
   <div class="d-flex flex-column">
     <h1 style="color: yellow; font-family: 'Kenia', sans-serif; font-size: 80px;box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.9); " class="mt-5 mb-4 align-self-center">Tienda Street Style Argentina</h1>
-    ${filterUbication.map((detalle) => `
+    ${filterUbication
+      .map(
+        (detalle) => `
       <div class="card-body">
         <h5 class="card-title mt-3 mb-3" style="color: white; font-family: 'Kenia', sans-serif; font-size: 50px; ">${detalle.nombre}</h5>
         <p class="card-text mt-5 mb-4" style="color: white; font-family: 'Kenia', sans-serif; font-size: 25px;">
@@ -19,5 +21,28 @@ divMap.innerHTML = `
       ${detalle.descripcion}
     </p>
     </div>`
-  ).join('')}
+      )
+      .join("")}
 `;
+
+const addCart = (carritoProducto) => {
+  const carrito = JSON.parse(localStorage.getItem("arrCart")) || [];
+  const productsData = JSON.parse(localStorage.getItem("localProducts"));
+  const filterProds = productsData.filter(
+    (filterCart) => filterCart.id === carritoProducto
+  );
+
+  const productoExistente = carrito.find((item) => item.id === carritoProducto);
+  if (productoExistente) {
+    alert("El producto ya esta en el carrito");
+  } else {
+    filterProds.push(...carrito);
+    localStorage.setItem("arrCart", JSON.stringify(filterProds));
+    Swal.fire({
+      icon: 'success',
+      title: 'Genial...',
+      text: 'Producto agregado al carrito',
+      
+    })
+  }
+};
