@@ -46,12 +46,12 @@ const searchProd = (ev) => {
         .join("");
 };
 
-const productDs=JSON.parse(localStorage.getItem('productDs'))||[];
+const productDs = JSON.parse(localStorage.getItem('productDs')) || [];
 imgPrincipal.innerHTML = productDs.map((pdp) => `
-  <div id="imgPrincipal"  class="divImg" style="position: relative;">
-    <img src="${pdp.imagen}" alt="producto-destacado" class="class-img-principal" style="width: 100%; height: 50%; object-fit: cover;">
+  <div id="imgPrincipal" class="divImg" style="position: relative; height: 50%; overflow: hidden;">
+    <img src="${pdp.imagen}" alt="producto-destacado" class="class-img-principal" style= " width: 100%; object-fit: cover;">
     <div style="position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); text-align: center; background: rgba(0, 0, 0, 0.5); color: white;">
-    <h1 style="font-size: 60px; font-family: 'Agbalumo', sans-serif; color: yellow;">Producto Destacado</h1>
+      <h1 style="font-size: 60px; font-family: 'Agbalumo', sans-serif; color: yellow;">Producto Destacado</h1>
     </div>
   </div>
 `)
