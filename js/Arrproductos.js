@@ -6,6 +6,8 @@ const productErrThree=document.getElementById("productErrThree");
 productErrOne.classList.add("d-none");
 productErrThree.classList.add("d-none");
 productErrTwo.classList.add("d-none");
+const productErrFour=document.getElementById("productErrFour");
+productErrFour.classList.add("d-none");
 bodyTableProducts.innerHTML = usLsProduct.map((product) => `
   <tr>
     <th scope="row" class="user-id">${product.id}</th>
@@ -135,6 +137,7 @@ createNewProductDate=()=>{
   const nameProduct=document.getElementById("nameProduct").value;
   const priceProduct=document.getElementById("priceProduct").value;
   const marcaProduct=document.getElementById("marcaProduct").value;
+  const urlProducts=document.getElementById("urlProduct").value;
   const products=JSON.parse(localStorage.getItem("localProducts"))||[]
   const id= products.length>0 ? products[products.length-1].id + 1 : 1;
   const objetNewProduct={
@@ -142,6 +145,7 @@ createNewProductDate=()=>{
     nombre:nameProduct,
     precio:priceProduct,
     marca:marcaProduct,
+    url: urlProducts,
   }
 
   if (!nameProduct) {
@@ -156,7 +160,10 @@ createNewProductDate=()=>{
     productErrThree.classList.remove("d-none");
   }
 
-  if (nameProduct && priceProduct && marcaProduct) {
+  if (!urlProducts) {
+    productErrFour.classList.remove("d-none");
+  }
+  if (nameProduct && priceProduct && marcaProduct && urlProducts) {
     usLsProduct.push(objetNewProduct);
     localStorage.setItem('localProducts',JSON.stringify(usLsProduct));
     window.location.reload()
