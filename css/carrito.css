@@ -8,7 +8,17 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+
 }
+#color-body {
+    background-image: url("https://images.pexels.com/photos/163403/box-sport-men-training-163403.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat: no-repeat;
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-position: center center; /* Centra la imagen horizontal y verticalmente */
+    color: rgb(255, 255, 255);
+  }
+  
+  
 .color-nav{
  background-color: #ecec0f;
  }
@@ -35,6 +45,49 @@ margin-top: auto;
     border-radius: 50%;
     margin-top: 5px
  }
- th {
-    margin-right: 10px;
-}
+
+ 
+.table-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+  }
+  
+
+ table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+
+  th{
+    color: #ecec0f;
+  }
+  
+
+@media (max-width: 600px) {
+    th, td {
+      font-size: 10px;
+      padding: 5px;
+    }
+  
+
+    .btn-delete {
+      background-color: #ff0000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 8px;
+      padding: 3px 6px; /
+    }
+  }
+  
+
+
+ 
