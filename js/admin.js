@@ -157,7 +157,7 @@ if (!validEmail.test(Email)) {
   modalErrNine.classList.remove("d-none");
   createNewEmail.value=""
 }
-     const regularExpresion = /^[a-zA-Z]+$/
+     const regularExpresion = /^[a-zA-Z\s]+$/
      const expresionModal = createNewName.value
      if (regularExpresion.test(expresionModal)) {
       errorModalCaracter.classList.remove("d-none")

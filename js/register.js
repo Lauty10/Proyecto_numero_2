@@ -122,29 +122,33 @@ if (!repet) {
     passRepet.classList.add("input-error")
 }
 
-const validSpecial=/^[a-zA-Z]+$/
-const nameSpecial=name.value
-if (validSpecial.test(nameSpecial)) {
-    errorCaracter.classList.remove("d-none")
-}else{
-    errorCaracter.classList.add("d-none")
-}
-
 const valid=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-const Email=emailR.value
-if (!valid.test(Email)) {
+const Email=email
+if(!valid.test(Email)) {
     errFive.classList.remove("d-none")
     emailR.value="";
 }else{
     errFive.classList.add("d-none")
 }
-if (name && pass===repet && valid.test(Email) && !validSpecial.test(nameSpecial)) {
+
+
+const validTwo = /^[a-zA-Z\s]+$/
+
+const nameSpecial = name
+if(!validTwo.test(nameSpecial)) {
+    errorCaracter.classList.remove("d-none");
+    nameR.value=""
+}else{
+   errorCaracter.classList.add("d-none");
+}
+
+
+if (name && pass === repet && valid.test(Email) && validTwo.test(nameSpecial)){
     const individual = {
         correo: dataInfo.email,
         login: false,
     };
     localStorage.getItem("individualUser",JSON.stringify(individual))
-
     const user=JSON.parse(localStorage.getItem("user"))||[]
     const id= user.length>0 ? user[user.length-1].id + 1 : 1;
     const newObjData={
@@ -152,7 +156,7 @@ if (name && pass===repet && valid.test(Email) && !validSpecial.test(nameSpecial)
         nombre:dataInfo.name,
         contrasenia:dataInfo.pass,
         correo:dataInfo.email,
-        role:"user",
+        role:"admin",
         login:false,
     }
     user.push(newObjData)
