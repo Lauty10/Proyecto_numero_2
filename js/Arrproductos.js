@@ -3,9 +3,19 @@ const bodyTableProducts=document.getElementById("body-table-products");
 const productErrOne=document.getElementById("productErrOne");
 const productErrTwo=document.getElementById("productErrTwo");
 const productErrThree=document.getElementById("productErrThree");
+const productErrFour=document.getElementById("productErrFour");
+const productErrFive=document.getElementById("productErrFive");
+const productErrSix=document.getElementById("productErrSix");
+const desProduct=document.getElementById("desProduct");
+const desProductVenta=document.getElementById("desProductVenta");
+
 productErrOne.classList.add("d-none");
 productErrThree.classList.add("d-none");
 productErrTwo.classList.add("d-none");
+productErrFour.classList.add("d-none");
+productErrFive.classList.add("d-none");
+productErrSix.classList.add("d-none");
+
 bodyTableProducts.innerHTML = usLsProduct.map((product) => `
   <tr>
     <th scope="row" class="user-id">${product.id}</th>
@@ -135,13 +145,19 @@ createNewProductDate=()=>{
   const nameProduct=document.getElementById("nameProduct").value;
   const priceProduct=document.getElementById("priceProduct").value;
   const marcaProduct=document.getElementById("marcaProduct").value;
+  const urlProducts=document.getElementById("urlProduct").value;
+  const desProduct=document.getElementById("desProduct").value;
+  const desProductVenta=document.getElementById("desProductVenta").value;
   const products=JSON.parse(localStorage.getItem("localProducts"))||[]
   const id= products.length>0 ? products[products.length-1].id + 1 : 1;
   const objetNewProduct={
     id,
     nombre:nameProduct,
-    precio:priceProduct,
-    marca:marcaProduct,
+    individual:priceProduct,
+    categoria:marcaProduct,
+    imagen: urlProducts,
+    descripcion: desProduct,
+    verso: desProductVenta,
   }
 
   if (!nameProduct) {
@@ -156,7 +172,10 @@ createNewProductDate=()=>{
     productErrThree.classList.remove("d-none");
   }
 
-  if (nameProduct && priceProduct && marcaProduct) {
+  if (!urlProducts) {
+    productErrFour.classList.remove("d-none");
+  }
+  if (nameProduct && priceProduct && marcaProduct && urlProducts) {
     usLsProduct.push(objetNewProduct);
     localStorage.setItem('localProducts',JSON.stringify(usLsProduct));
     window.location.reload()
@@ -170,6 +189,7 @@ productModal._element.addEventListener('hidden.bs.modal', function () {
   document.getElementById("nameProduct").value = "";
   document.getElementById("priceProduct").value = "";
   document.getElementById("marcaProduct").value = "";
+  document.getElementById("urlProduct").value = "";
 
   const errorElements = document.querySelectorAll(".text-danger");
   errorElements.forEach((element) => {
