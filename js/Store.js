@@ -11,7 +11,7 @@ divsCards.innerHTML = arrProducts
             <img src="${products.imagen}" class="card-img-top" alt="producto">
             <div class="card-body">
                 <h5 class="card-title">${products.nombre}</h5>
-                <p class="card-text">${products.descripcion}</p>
+                <p class="card-text">${products.descripcion}. El precio es de ${products.individual}</p>
                 <a href="../html/detalle.html?id=${products.id}" class="btn btn-warning">Ver producto</a>
             </div>
         </div>
