@@ -18,7 +18,6 @@ productErrSix.classList.add("d-none");
 
 bodyTableProducts.innerHTML = usLsProduct.map((product) => `
   <tr>
-    <th scope="row" class="user-id">${product.id}</th>
     <td>${product.nombre}</td>
     <td>${product.precio}</td>
     <td>${product.categoria}</td>

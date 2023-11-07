@@ -28,7 +28,7 @@ modalErrTen.classList.add("d-none");
 
 bodyTable.innerHTML = usLs.filter((usuario)=>usuario.correo!==individualUser.correo).map((usuario) => `
   <tr>
-    <th scope="row" class="user-id">${usuario.id}</th>
+
     <td>${usuario.nombre}</td>
     <td>${usuario.correo}</td>
     <td>${usuario.role}</td>
