@@ -152,7 +152,7 @@ if (name && pass===repet && valid.test(Email) && !validSpecial.test(nameSpecial)
         nombre:dataInfo.name,
         contrasenia:dataInfo.pass,
         correo:dataInfo.email,
-        role:"admin",
+        role:"user",
         login:false,
     }
     user.push(newObjData)
