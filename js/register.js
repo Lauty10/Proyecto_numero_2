@@ -156,7 +156,7 @@ if (name && pass === repet && valid.test(Email) && validTwo.test(nameSpecial)){
         nombre:dataInfo.name,
         contrasenia:dataInfo.pass,
         correo:dataInfo.email,
-        role:"admin",
+        role:"user",
         login:false,
     }
     user.push(newObjData)
