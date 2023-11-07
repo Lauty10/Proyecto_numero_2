@@ -11,6 +11,7 @@ const modalErrEigth=document.getElementById("modalErrEigth");
 const modalErrNine=document.getElementById("modalErrNine");
 const modalErrTen=document.getElementById("modalErrTen");
 const validRole=document.getElementById("validRole")
+const errorModalCaracter= document.getElementById("errorModalCaracter")
 
 const myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
 
@@ -23,6 +24,7 @@ modalErrSix.classList.add("d-none");
 modalErrEigth.classList.add("d-none");
 modalErrNine.classList.add("d-none");
 modalErrTen.classList.add("d-none");
+errorModalCaracter.classList.add("d-none"); 
 
 
 
@@ -109,6 +111,7 @@ const upDateUser = (usId) => {
         alert("El rol ingresado no es válido. Debe ser 'admin' o 'user'.");
         return
       }
+      
       if (nameInputEdit==="") {
         alert("asigne un nombre")
         return
@@ -154,6 +157,14 @@ if (!validEmail.test(Email)) {
   modalErrNine.classList.remove("d-none");
   createNewEmail.value=""
 }
+     const regularExpresion = /^[a-zA-Z]+$/
+     const expresionModal = createNewName.value
+     if (regularExpresion.test(expresionModal)) {
+      errorModalCaracter.classList.remove("d-none")
+     }else{
+     errorModalCaracter.classList.add("d-none")
+      }
+
   if (createNewName==="") {
     modalErrOne.classList.remove("d-none");
   }
@@ -186,8 +197,7 @@ if (!validEmail.test(Email)) {
   }
 
 
-
-  if (createNewName!=="" && createNewPassRepet===createNewPass && validEmail.test(Email) && createNewRole==="admin") {
+  if (createNewName!=="" && createNewPassRepet===createNewPass && validEmail.test(Email) && createNewRole==="admin" && !regularExpresion.test(expresionModal)) {
     usLs.push(objetNewAdmin);
     localStorage.setItem('user',JSON.stringify(usLs))
     window.location.reload()

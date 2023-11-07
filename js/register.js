@@ -9,7 +9,8 @@ const errFor=document.getElementById("errFor");
 const buttonInfo=document.getElementById("buttonInfo");
 const errFive=document.getElementById("errFive");
 const passErr=document.getElementById("passErr");
-const passErrTwo=document.getElementById("passErrTwo")
+const passErrTwo=document.getElementById("passErrTwo");
+const errorCaracter=document.getElementById("errorCaracter");
 
 
 errOne.classList.add("d-none")
@@ -19,6 +20,7 @@ errFor.classList.add("d-none")
 errFive.classList.add("d-none")
 passErr.classList.add("d-none")
 passErrTwo.classList.add("d-none")
+errorCaracter.classList.add("d-none")
 
 
 const dataInfo={
@@ -99,6 +101,7 @@ if (pass!==repet) {
     passErrTwo.classList.add("d-none");
 }
 
+
 if (!name){
     errOne.classList.remove("d-none")
     nameR.classList.add("input-error")
@@ -119,6 +122,14 @@ if (!repet) {
     passRepet.classList.add("input-error")
 }
 
+const validSpecial=/^[a-zA-Z]+$/
+const nameSpecial=name.value
+if (validSpecial.test(nameSpecial)) {
+    errorCaracter.classList.remove("d-none")
+}else{
+    errorCaracter.classList.add("d-none")
+}
+
 const valid=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const Email=emailR.value
 if (!valid.test(Email)) {
@@ -127,7 +138,7 @@ if (!valid.test(Email)) {
 }else{
     errFive.classList.add("d-none")
 }
-if (name && pass===repet && valid.test(Email)) {
+if (name && pass===repet && valid.test(Email) && !validSpecial.test(nameSpecial)) {
     const individual = {
         correo: dataInfo.email,
         login: false,
